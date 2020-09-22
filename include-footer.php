@@ -7,6 +7,8 @@
 					<a href="https://facebook.com/christian.ocol" class="footer__media-link" target="_blank">
 						<i class="fab fa-facebook-f" aria-hidden="true"></i>
 						facebook.com/christian.ocol
+						facebook.com/christian.ocol
+						facebook.com/christian.ocol
 					</a>
 				</li>
 				<li class="footer__media-item">
