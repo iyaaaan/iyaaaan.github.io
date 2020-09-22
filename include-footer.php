@@ -12,6 +12,8 @@
 				<li class="footer__media-item">
 					<a href="https://instagram.com/iyaaaan__" class="footer__media-link" target="_blank">
 						<i class="fab fa-instagram"></i> instagram.com/iyaaaan_
+						instagram.com/iyaaaan_
+						instagram.com/iyaaaan_
 					</a>
 				</li>
 			</ul>
