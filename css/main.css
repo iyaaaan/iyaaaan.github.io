@@ -344,7 +344,7 @@ a:focus {
 	transition: all .3s linear;
 	cursor: pointer;
 	z-index: 1050;
-	color: #555;
+	color: red;
 }
 
 @media screen and (min-width: 768px) {
