@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Kristyan | About Me</title>
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+
+</head>
+
+<body>
+
+    <!-- navigation bar -->
+    <header>
+        <nav class="navbar">
+
+            <a href="index.html" class="navbar__logo" title="HOME"><i class="fas fa-hamsa"></i></a>
+
+            <ul class="navbar__menu js-navbar">
+                <li class="navbar__item">
+                    <a href="page-about.html" class="navbar__link">About</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="page-projects.html" class="navbar__link">Projects</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="page-contact.html" class="navbar__link">Contact</a>
+                </li>
+            </ul>
+
+            <span class="navbar__toggler js-toggler" onclick="navbarToggle()" title="MENU">
+                <span class="navbar__bar js-menu-bar"></span>
+            </span>
+
+        </nav>
+    </header>
+    <div class="about">
+        <h2 class="about__caption">I</h2>
+        <h2 class="about__caption">am</h2>
+        <h2 class="about__caption">kristyan.</h2>
+
+        <a href="#about-text" class="about__more">
+            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <div class="container padding-y" id="about-text">
+        <h2 class="title">About me</h2>
+        <div class="about__text padding-x">
+            <p>Hey, what's up? I'm Christian and I love inspecting these gorgeous websites!</p>
+            <p>I always wanted to created something that will make people wonder how the ef did I do that. I've created simple websites including this and still filling in the unlimited rooms for improvement. The more I code, the more I learn about web development and it always keeps me digging what's best for what. Giving my clients the ultimate satisfation is my goal!</p>
+        </div>
+    </div>
+
+
+    <div class="container padding-y">
+        <h2 class="title">Professional Experience</h2>
+        <div class="about__exp padding-x">
+            <h4 class="about__title">PhilHealth Processor</h4>
+            <h5>Our Lady of Lourdes Hospital</h5>
+            <h5 class="about__date">March 2020 - September 2020</h5>
+
+            <ul class="about__exp-list">
+                <li>
+                    <p>Validates and sends required documents of patients to PhilhHealth for payment of vaious benefits.</p>
+                </li>
+                <li>
+                    <p>Assisted in troubleshooting network.</p>
+                </li>
+                <li>
+                    <p>Sends e-mail to the Regional PhilHealth Office</p>
+                </li>
+            </ul>
+
+            <h4 class="about__title">Web Design Intern</h4>
+            <h5>Atlantis Systems Technologies Filipinas Corp.</h5>
+            <h5 class="about__date">June 2018 - September 2018</h5>
+
+            <ul class="about__exp-list">
+                <li>
+                    <p>Validates and sends required documents of patients to PhilhHealth for payment of vaious benefits.</p>
+                </li>
+                <li>
+                    <p>Assisted in troubleshooting network.</p>
+                </li>
+                <li>
+                    <p>Sends e-mail to the Regional PhilHealth Office</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="container padding-y">
+        <h2 class="title">Education</h2>
+        <div class="padding-y padding-x about__educ padding-x">
+            <h4 class="about__title">Camarines Norte State College (CNSC) - Main Campus</h4>
+            <h5>Bachelor of Science in Information Technology</h5>
+            <h5 class="about__date">June 2015 - April 2019</h5>
+        </div>
+    </div>
+
+    <div class="container padding-y">
+        <h2 class="title">Projects/ Thesis</h2>
+        <div class="about__thesis padding-x">
+            <h4 class="about__title">Department of Agrarian Reform Web-based Human Resource Profile and Salary Tranche Management System</h4>
+            <h5 class="about__date">October 2018 – April 2019</h5>
+        </div>
+        <div>
+            <ul class="about__thesis-list">
+                <li>
+                    <p>Font-end developer of the team.</p>
+                </li>
+                <li>
+                    <p>Implemented web design using HTML5, CSS3, JavasScript, jQuery, and Bootstrap for responsiveness.</p>
+                </li>
+                <li>
+                    <p>Assisted in Managing database using SQL and PHP.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container padding-y">
+        <h2 class="title">Skills</h2>
+        <div class="about__skills">
+            <span><i class="fab fa-html5" title="HTML5"></i></span>
+            <span><i class="fab fa-css3-alt" title="CSS3"></i></span>
+            <span><i class="fab fa-js-square" title="JavaScript"></i></span>
+            <span><i class="fab fa-sass" title="SASS"></i></span>
+            <span><i class="fab fa-bootstrap" title="Bootstrap"></i></span>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <footer>
+        <div class="footer">
+            <span class="footer__copyright">Copyright © 2020 | CHRISTIAN A. OCOL</span>
+
+            <ul class="footer__media">
+                <li class="footer__media-item">
+                    <a href="https://facebook.com/christian.ocol" class="footer__media-link" target="_blank">
+                        <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        facebook.com/christian.ocol
+                    </a>
+                </li>
+                <li class="footer__media-item">
+                    <a href="https://instagram.com/iyaaaan__" class="footer__media-link" target="_blank">
+                        <i class="fab fa-instagram"></i> instagram.com/iyaaaan_
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/font-awesome.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- navbar active state -->
+    <script>
+        $(document).ready(function() {
+            $('.navbar__link:eq(0)').addClass('is-active');
+        });
+
+    </script>
+
+
+</body>
+
+</html>
