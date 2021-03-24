@@ -155,8 +155,15 @@ a:focus {
 
 .navbar {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: transparent;
+	padding: 1.5rem;
+	z-index: 99;
 
 }
 
@@ -314,7 +321,7 @@ a:focus {
 	text-align: center;
 	font-weight: 100;
 	position: relative;
-	z-index: 99;
+	z-index: 20;
 }
 
 .hero__caption {
@@ -332,21 +339,25 @@ a:focus {
 
 .navbar__logo {
 	font-size: 5rem;
-	position: fixed;
+	position: relative;
+	/*
 	top: 1rem;
 	left: 2rem;
+*/
 	transition: all .3s linear;
 	cursor: pointer;
 	z-index: 1050;
 	color: #555;
 }
 
+/*
 @media screen and (min-width: 768px) {
 	.navbar__logo {
 		top: 49%;
 		transform: translateY(-50%);
 	}
 }
+*/
 
 .navbar__logo.is-active {
 	color: var(--main-color);
@@ -358,20 +369,23 @@ a:focus {
 }
 
 .navbar__toggler {
-	position: fixed;
+	position: relative;
+	/*
 	top: 3rem;
 	right: 2rem;
+*/
 	z-index: 1050;
 	padding: 10px;
 	transition: all .3s linear;
 }
 
+/*
 @media screen and (min-width: 768px) {
 	.navbar__toggler {
 		top: 50%;
 		transform: translateY(-50%);
 	}
-}
+}*/
 
 .navbar__bar,
 .navbar__bar::after,
