@@ -241,12 +241,6 @@ a:focus {
 	}
 }
 
-
-
-.btn--dark:hover {
-	background-color: #1a3045;
-}
-
 .container-fluid {
 	width: 100%;
 	padding-left: 1.5rem;
@@ -551,11 +545,31 @@ a:focus {
 	flex-wrap: wrap;
 }
 
+.projects__inner {
+	box-shadow: 0 0 5px var(--muted);
+	width: 100%;
+	height: 380px;
+	overflow-y: scroll;
+}
+
+@media screen and (min-width: 576px) {
+	.projects__inner {
+		height: 530px;
+	}
+
+}
+
+@media screen and (min-width: 768px) {
+	.projects__inner {
+		height: 430px;
+	}
+
+}
+
 
 .projects__img {
 	width: 100%;
 	display: block;
-	box-shadow: -8px 8px 15px 2px var(--muted);
 }
 
 .projects__text {
@@ -566,6 +580,23 @@ a:focus {
 	margin: 2rem auto 3rem;
 	flex-direction: column;
 	text-align: left;
+}
+
+.projects__btn {
+	background: var(--main-color);
+	border-radius: 5px;
+	color: #fff;
+	display: inline-block;
+	margin-top: 3rem;
+	min-width: 180px;
+	padding: 1rem;
+	text-align: center;
+	transition: .3s;
+
+}
+
+.projects__btn:hover {
+	background: #426677;
 }
 
 .projects__title {
@@ -593,6 +624,8 @@ a:focus {
 	}
 }
 
+
+/*contact*/
 .contact {
 	background-color: #000;
 	width: 100%;
@@ -698,4 +731,22 @@ a:focus {
 	.footer__media {
 		flex-direction: row;
 	}
+}
+
+.artine {
+	width: 50%;
+}
+
+.artine-inner {
+	width: 100%;
+	height: 450px;
+	background: red;
+	overflow-y: scroll;
+
+}
+
+.artine-img {
+	display: block;
+	width: 100%;
+
 }
