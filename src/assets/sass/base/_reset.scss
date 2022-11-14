@@ -1,0 +1,55 @@
+/* ############ DEFAULTS ############ */
+* {
+    box-sizing: border-box;
+    // margin: 0;
+    // padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
+}
+
+body {
+    color: var(--black);
+    font-size: calc(15px + 0.390625vw);
+    font-family: var(--font-primary);
+    overflow-x: hidden;
+    background-color: var(--color-devonshire);
+    margin: 0;
+    padding: 0;
+}
+
+body.disable-scroll {
+    overflow: hidden;
+}
+
+//Scroll bar styles
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ddecef;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #919191;
+    border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #6e6e6e;
+}
+
+
+//change color and bg on selection
+::selection {
+    color: var(--white);
+    background-color: var(--color-primary);
+}

@@ -1,0 +1,15 @@
+@font-face {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    unicode-range: U+000-5FF;
+    src: local('Poppins'),
+        local('Poppins-Regular'),
+        url(./../fonts/Poppins-Regular.ttf) format('ttf');
+}
+
+@font-face {
+    font-family: SergioTrendy;
+    src: url(../fonts/Sergiotrendy-Regular.ttf);
+}
