@@ -7,6 +7,7 @@ export default {
         email: '',
         message: '',
         sending: false,
+        dialogue: false,
         dialogueTitle: '',
         dialogueText: '',
     }),
@@ -25,12 +26,16 @@ export default {
     <div class="container-right">
         <div>
             <div class="form">
-                <div class="form-overlay">
+                <div class="form-overlay" v-if="sending">
                     <span><i class="fa fa-spinner" aria-hidden="true"></i></span>
                 </div>
 
-                <div class="dialogue">
-                    <div class="dialogue__title">{{dialogueTitle}}</div>
+                <div class="dialogue" v-if="dialogue">
+                    <div class="dialogue-header">
+                        <div class="dialogue__title">{{dialogueTitle}}</div>
+                        <i class="fa fa-times dialogue__close" aria-hidden="true"></i>
+                    </div>
+                    
                     <div class="dialogue__text">{{dialogueText}}</div>
                 </div>
 
@@ -99,18 +104,35 @@ export default {
                     email_id : this.email,
                     message : this.message
                 }
+
+                let vm = this;
             
                 emailjs.send("service_jskb7yp", "template_frsdhvq", params).then(function (res) {
                     if(res.status === 200) {
                         setTimeout(() => {
-                            alert("Thank you for getting in touch with me! I'll be sure to respond as soon as I can. :)");
-                            this.loading = false;
-                         }, 3000)
+                            vm.sending = false;
+                         }, 3000);
+
+                        vm.dialogue = true;
+                        vm.dialogueTitle = "E-mail sent successfuly!";
+                        vm.dialogueText = "Thank you for getting in touch with me! I'll be sure to respond as soon as I can. :)";
+
+                        setTimeout(() => {
+                            vm.dialogue = false
+                        }, 3000);
                     } else {
                         setTimeout(() => {
                             alert("Failed! Unknown error occured. Please try again later.");
-                            this.loading = false;
-                         }, 3000)
+                            vm.sending = false;
+                         }, 3000);
+
+                        vm.dialogue = true;
+                        vm.dialogueTitle = "Sending failed!";
+                        vm.dialogueText = "Unknown error occured. Please try again later.";
+
+                        setTimeout(() => {
+                            vm.dialogue = false
+                        }, 3000)
                     }
 
                 })
@@ -118,6 +140,7 @@ export default {
                 this.name = '';
                 this.email = '';
                 this.message = '';
+                
 
             } else {
                 alert("Please fill out all fields.");

@@ -15,6 +15,14 @@
     transform: rotate(360deg);
   }
 }
+@keyframes bring-down {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 :root {
   --font-primary: "Poppins", sans-serif;
   --font-title: "Merriweather", serif;
@@ -484,7 +492,7 @@ textarea {
   width: 100%;
   bottom: 5px;
   left: 0;
-  background-color: #174fd366;
+  background-color: rgba(23, 79, 211, 0.4);
   z-index: -1;
 }
 .hero__caption code {
@@ -830,7 +838,7 @@ textarea {
     top: 100px;
     z-index: 2;
     background-color: var(--color-julep-green);
-    box-shadow: 0 0 20px 0px #11111138;
+    box-shadow: 0 0 20px 0px rgba(17, 17, 17, 0.2196078431);
   }
 }
 
@@ -1267,7 +1275,7 @@ textarea {
   border-radius: 0 10px 10px 0;
 }
 .btn-send:hover {
-  box-shadow: 0 0 15px #9f9f9fe3;
+  box-shadow: 0 0 15px rgba(159, 159, 159, 0.8901960784);
 }
 .btn-send:hover .btn-send__icon {
   width: 30%;
@@ -1275,6 +1283,45 @@ textarea {
 }
 .btn-send:hover .btn-send__text {
   transform: translateX(-30px);
+}
+
+.dialogue {
+  position: fixed;
+  max-width: 500px;
+  background-color: var(--color-dreamsicle);
+  top: 80px;
+  left: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 13px 2px #b7b0b0;
+  z-index: 99;
+  animation-name: bring-down;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+}
+.dialogue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.dialogue__close {
+  color: var(--color-fresh-watermelon);
+  font-size: 15px;
+}
+.dialogue__close:hover {
+  color: var(--color-almost-famous);
+}
+.dialogue__title {
+  font-size: 18px;
+  font-family: var(--font-title);
+  color: var(--color-fresh-watermelon);
+  font-weight: 600;
+}
+.dialogue__text {
+  margin-top: 15px;
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=main.css.map */
