@@ -21,7 +21,7 @@ export default {
                 <h2>I'm <span>Christian!</span></h2>
                 <code><small>a front-end web developer</small></code>
 
-                <button class="hero__cta">Get in touch!</button>
+                <router-link to="/contact" class="hero__cta">Get in touch! </router-link>
             </div>
 
             <div class="hero__img">

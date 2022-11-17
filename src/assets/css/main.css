@@ -472,6 +472,9 @@ textarea {
   margin-bottom: 15px;
   margin-top: 0;
   display: inline-block;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  transform: translateY(100px);
+  opacity: 0;
 }
 @media screen and (min-width: 992px) {
   .hero__caption h2 {
@@ -504,11 +507,15 @@ textarea {
   }
 }
 .hero__cta {
+  font-size: 13px;
+  text-align: center;
+  font-weight: 600;
+  font-family: var(--font-primary);
+  text-decoration: none;
   background-color: var(--color-julep-green);
   border: none;
   border-radius: 10px;
   color: var(--color-almost-famous);
-  font-weight: bold;
   display: block;
   margin-top: 30px;
   width: 150px;
@@ -556,7 +563,8 @@ textarea {
   width: 400px;
   position: relative;
   right: 35px;
-  top: 100px;
+  transform: translateY(200px);
+  opacity: 0;
   box-shadow: -6px 6px 8px 1px rgba(0, 0, 0, 0.5);
 }
 .hero__img img {
