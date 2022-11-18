@@ -72,6 +72,9 @@
 
         & code {
             display: block;
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+            transform: translateY(100px);
+            opacity: 0;
 
             @include respond-to(large) {
                 margin-top: 50px;
@@ -101,6 +104,9 @@
 
         color: var(--color-almost-famous);
         box-shadow: -4px 4px var(--color-fresh-watermelon);
+
+        transform: translateY(100px);
+        opacity: 0;
 
         @include respond-to(large) {
             box-shadow: unset;
@@ -170,7 +176,8 @@
         box-shadow: -6px 6px 8px 1px rgb(0 0 0 / 50%);
         position: relative;
         margin: 0 auto 0 auto;
-        //z-index: 10;
+        transform: translateX(-200px);
+        opacity: 0;
 
         @include respond-to(medium) {
             flex: 0 0 30%;
@@ -216,11 +223,19 @@
             font-size: 40px;
             color: var(--color-highlight);
             text-shadow: -2px 2px var(--color-julep-green);
+
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            transform: translateX(-100px);
+            opacity: 0;
         }
 
         &-text {
             font-size: 20px;
             color: var(--color-fresh-watermelon);
+
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            transform: translateX(-100px);
+            opacity: 0;
         }
     }
     
@@ -237,7 +252,9 @@
         box-shadow: -6px 6px 8px 1px rgb(0 0 0 / 50%);
         position: relative;
         margin: 0 auto 0 auto;
-        //z-index: 10;
+
+        transform: translateX(-200px);
+        opacity: 0;
 
         @include respond-to(medium) {
             flex: 0 0 50%;
@@ -283,11 +300,19 @@
             font-size: 40px;
             color: var(--color-highlight);
             text-shadow: -2px 2px var(--color-julep-green);
+
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            transform: translateX(-100px);
+            opacity: 0;
         }
 
         &-text {
             font-size: 20px;
             color: var(--color-fresh-watermelon);
+
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            transform: translateX(-100px);
+            opacity: 0;
         }
     }
     
@@ -305,6 +330,10 @@
         color: var(--color-highlight);
         text-shadow: -2px 2px var(--color-julep-green);
         margin-bottom: 50px;
+
+        clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+        transform: translateY(100px);
+        opacity: 0;
     }
 
     &-info {
@@ -315,6 +344,11 @@
         &__item {
             flex: 0 0 100%;
            margin: 50px auto;
+
+           & i {
+            transform: translateY(100px);
+            opacity: 0;
+           }
             
         }
 
@@ -355,6 +389,10 @@
             display: block;
             font-size: 24px;
             font-weight: 600;
+
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+            transform: translateY(100px);
+            opacity: 0;
         }
 
     }

@@ -1,11 +1,13 @@
 .read-more {
     color: var(--color-highlight);
+    display: inline-block;
     font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
     margin-right: 10px;
     position: relative;
     transition: .3s;
+    opacity: 0;
 
     & i {
         transition: .3s;

@@ -112,12 +112,14 @@ body.disable-scroll {
 /* ############ COMPONENTS ############ */
 .read-more {
   color: var(--color-highlight);
+  display: inline-block;
   font-size: 16px;
   text-decoration: none;
   text-transform: uppercase;
   margin-right: 10px;
   position: relative;
   transition: 0.3s;
+  opacity: 0;
 }
 .read-more i {
   transition: 0.3s;
@@ -500,6 +502,9 @@ textarea {
 }
 .hero__caption code {
   display: block;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  transform: translateY(100px);
+  opacity: 0;
 }
 @media screen and (min-width: 992px) {
   .hero__caption code {
@@ -526,6 +531,8 @@ textarea {
   overflow: hidden;
   color: var(--color-almost-famous);
   box-shadow: -4px 4px var(--color-fresh-watermelon);
+  transform: translateY(100px);
+  opacity: 0;
 }
 @media screen and (min-width: 992px) {
   .hero__cta {
@@ -588,6 +595,8 @@ textarea {
   box-shadow: -6px 6px 8px 1px rgba(0, 0, 0, 0.5);
   position: relative;
   margin: 0 auto 0 auto;
+  transform: translateX(-200px);
+  opacity: 0;
 }
 @media screen and (min-width: 768px) {
   .about__img {
@@ -631,10 +640,16 @@ textarea {
   font-size: 40px;
   color: var(--color-highlight);
   text-shadow: -2px 2px var(--color-julep-green);
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  transform: translateX(-100px);
+  opacity: 0;
 }
 .about__caption-text {
   font-size: 20px;
   color: var(--color-fresh-watermelon);
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  transform: translateX(-100px);
+  opacity: 0;
 }
 
 .project {
@@ -648,6 +663,8 @@ textarea {
   box-shadow: -6px 6px 8px 1px rgba(0, 0, 0, 0.5);
   position: relative;
   margin: 0 auto 0 auto;
+  transform: translateX(-200px);
+  opacity: 0;
 }
 @media screen and (min-width: 768px) {
   .project__img {
@@ -693,10 +710,16 @@ textarea {
   font-size: 40px;
   color: var(--color-highlight);
   text-shadow: -2px 2px var(--color-julep-green);
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  transform: translateX(-100px);
+  opacity: 0;
 }
 .project__caption-text {
   font-size: 20px;
   color: var(--color-fresh-watermelon);
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  transform: translateX(-100px);
+  opacity: 0;
 }
 
 .contact {
@@ -711,6 +734,9 @@ textarea {
   color: var(--color-highlight);
   text-shadow: -2px 2px var(--color-julep-green);
   margin-bottom: 50px;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  transform: translateY(100px);
+  opacity: 0;
 }
 .contact-info {
   display: flex;
@@ -720,6 +746,10 @@ textarea {
 .contact-info__item {
   flex: 0 0 100%;
   margin: 50px auto;
+}
+.contact-info__item i {
+  transform: translateY(100px);
+  opacity: 0;
 }
 .contact-info__loc, .contact-info__phone, .contact-info__email {
   position: relative;
@@ -752,6 +782,9 @@ textarea {
   display: block;
   font-size: 24px;
   font-weight: 600;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  transform: translateY(100px);
+  opacity: 0;
 }
 
 .about-hero {
