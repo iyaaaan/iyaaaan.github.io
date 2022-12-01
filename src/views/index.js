@@ -96,7 +96,7 @@ export default {
         let tl = gsap.timeline({ defaults: { ease: "power4.inOut", duration: 2 } });
         //let f = CSSRulePlugin.getRule(".class::pseudo");
     
-        ScrollTrigger.defaults({ease: "none", duration: 2, markers: true });
+        ScrollTrigger.defaults({ease: "none", duration: 2});
     
         tl.to('.hero__img', {y:100, opacity:1})
           .to('.hero__caption h2', {y:0, opacity:1, 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)'}, "-=2.2")
