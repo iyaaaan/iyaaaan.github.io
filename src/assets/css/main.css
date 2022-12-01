@@ -120,6 +120,7 @@ body.disable-scroll {
   position: relative;
   transition: 0.3s;
   opacity: 0;
+  transform: translateX(-50px);
 }
 .read-more i {
   transition: 0.3s;
@@ -808,6 +809,10 @@ textarea {
     font-size: 24px;
   }
 }
+.about-hero h1 {
+  transform: translateX(-200px);
+  opacity: 0;
+}
 
 .about-caption {
   position: relative;
@@ -820,7 +825,8 @@ textarea {
   flex: 0 80%;
   order: 2;
   position: relative;
-  top: -200px;
+  transform: translateY(200px);
+  opacity: 0;
 }
 .about-caption__img img {
   display: block;
@@ -850,6 +856,9 @@ textarea {
   top: -100px;
   padding: 20px;
   z-index: -1;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  opacity: 0;
+  transform: translateY(-100px);
 }
 .about-caption__text h2 {
   color: var(--color-highlight);
@@ -891,6 +900,9 @@ textarea {
   align-items: center;
   margin-top: 200px;
   padding: 50px 15px;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  opacity: 0;
+  transform: translateX(-200px);
 }
 .about-education__title {
   flex: 0 0 100%;
@@ -981,6 +993,9 @@ textarea {
   letter-spacing: 5px;
   line-height: 1;
   margin: 0;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  opacity: 0;
+  transform: translateX(-50px);
 }
 @media screen and (min-width: 576px) {
   .about-exp__title {
@@ -996,6 +1011,9 @@ textarea {
 }
 .about-exp__info {
   margin-top: 50px;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  opacity: 0;
+  transform: translateY(-100px);
 }
 .about-exp__position {
   color: var(--color-fresh-watermelon);
@@ -1017,6 +1035,9 @@ textarea {
   list-style-type: disclosure-closed;
   padding: 15px;
   margin: 0 auto;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  opacity: 0;
+  transform: translateY(-100px);
 }
 @media screen and (min-width: 992px) {
   .about-exp__desc {
@@ -1036,6 +1057,9 @@ textarea {
   letter-spacing: 5px;
   line-height: 1;
   margin: 0;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  opacity: 0;
+  transform: translateX(-50px);
 }
 @media screen and (min-width: 768px) {
   .about-skill__title {
@@ -1058,6 +1082,9 @@ textarea {
   position: relative;
   left: 0;
   transition: 0.3s ease;
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(50px);
 }
 .about-skill__item i {
   position: relative;
@@ -1102,6 +1129,10 @@ textarea {
     font-size: 24px;
   }
 }
+.project-hero h1 {
+  transform: translateX(-200px);
+  opacity: 0;
+}
 
 .my-project {
   display: flex;
@@ -1116,6 +1147,9 @@ textarea {
   flex: 0 0 100%;
   height: 330px;
   overflow-y: scroll;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transform: translateY(-50px);
+  opacity: 0;
 }
 .my-project__img img {
   display: block;
@@ -1158,10 +1192,16 @@ textarea {
 .my-project__title {
   font-family: var(--font-title);
   color: var(--color-fresh-watermelon);
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  transform: translateX(-50px);
+  opacity: 0;
 }
 .my-project__desc {
   font-family: var(--font-primary);
   color: var(--color-almost-famous);
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transform: translateY(-50px);
+  opacity: 0;
 }
 
 .contact-hero {
@@ -1171,6 +1211,8 @@ textarea {
   background-size: cover;
   height: calc(80vh - 88px);
   width: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  opacity: 0;
 }
 
 .form {
@@ -1187,6 +1229,8 @@ textarea {
   margin: 0 auto;
   padding: 20px;
   width: 90%;
+  transform: translateY(100px);
+  opacity: 0;
 }
 @media screen and (min-width: 768px) {
   .form {

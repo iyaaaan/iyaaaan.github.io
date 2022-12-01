@@ -65,13 +65,13 @@ export default {
         <div class="about-skill">
             <h2 class="about-skill__title">Skills</h2>
             <div class="about-skill-list">
-                <span class="about-skill__item" data-after="HTML 5"><i class="fab fa-html5" title="HTML5"></i></span>
-                <span class="about-skill__item" data-after="CSS 3"><i class="fab fa-css3-alt" title="CSS3"></i></span>
-                <span class="about-skill__item" data-after="JavaScript"><i class="fab fa-js-square" title="JavaScript"></i></span>
-                <span class="about-skill__item" data-after="SASS"><i class="fab fa-sass" title="SASS"></i></span>
-                <span class="about-skill__item" data-after="Bootstrap"><i class="fab fa-bootstrap" title="Bootstrap"></i></span>
-                <span class="about-skill__item" data-after="VueJs 3"><i class="fab fa-vuejs" title="VueJs"></i></span>
-                <span class="about-skill__item" data-after="PHP"><i class="fab fa-php" title="PHP"></i></span>
+                <div class="about-skill__item" data-after="HTML 5"><i class="fab fa-html5" title="HTML5"></i></div>
+                <div class="about-skill__item" data-after="CSS 3"><i class="fab fa-css3-alt" title="CSS3"></i></div>
+                <div class="about-skill__item" data-after="JavaScript"><i class="fab fa-js-square" title="JavaScript"></i></div>
+                <div class="about-skill__item" data-after="SASS"><i class="fab fa-sass" title="SASS"></i></div>
+                <div class="about-skill__item" data-after="Bootstrap"><i class="fab fa-bootstrap" title="Bootstrap"></i></div>
+                <div class="about-skill__item" data-after="VueJs 3"><i class="fab fa-vuejs" title="VueJs"></i></div>
+                <div class="about-skill__item" data-after="PHP"><i class="fab fa-php" title="PHP"></i></div>
             </div>
         </div>
     </div>
@@ -79,4 +79,63 @@ export default {
     <!-- footer -->
     <Footer></Footer>
     `,
+
+    mounted() {
+        gsap.registerPlugin(ScrollTrigger);
+        let tl = gsap.timeline({ defaults: { ease: "power4.inOut", duration: 2 } });
+        //let f = CSSRulePlugin.getRule(".class::pseudo");
+    
+        ScrollTrigger.defaults({ease: "none", duration: 2, markers: true });
+    
+        tl.to('.about-hero h1', {x: 0, opacity:1})
+
+        gsap.to('.about-caption__img', {y: 100, opacity:1, duration: 1.5,
+          scrollTrigger: {
+            trigger: '.about-caption__text',
+            start: "center 70%",
+          }
+        }, )
+
+        gsap.to('.about-caption__text', {y: 0, opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: .7,
+          scrollTrigger: {
+            trigger: '.about-caption__text',
+            start: "center 70%",
+          }
+        }, )
+
+        gsap.to('.about-education', {x: 0, opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1,
+          scrollTrigger: {
+            trigger: '.about-education',
+            start: "top center",
+          }
+        }, )
+
+        gsap.to('.about-exp__title', {x: 0, opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: .9,
+            scrollTrigger: {
+            trigger: '.about-exp__title',
+            start: "top 30%",
+            }
+        }, )
+
+        gsap.to('.about-exp__info, .about-exp__desc', {y: 0, opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1,
+            scrollTrigger: {
+                trigger: '.about-exp__title',
+                start: "top 30%",
+            }
+        }, )
+
+        gsap.to('.about-skill__title', {x: 0, opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: .9,
+            scrollTrigger: {
+                trigger: '.about-skill__title',
+                start: "top 90%",
+            }
+        }, )
+
+        gsap.to('.about-skill__item', {y: 0, opacity:1, duration: .3, stagger: .1, ease: "none",
+          scrollTrigger: {
+            trigger: '.about-skill__item',
+            start: "top 90%",
+          }
+        }, )
+    }
 }

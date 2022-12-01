@@ -64,7 +64,7 @@ export default {
 
     <div class="container-center">
         <div class="contact">
-            <div class="contact__title">contact me thru</div>
+            <div class="contact__title">get in touch</div>
             <div class="contact-info">
                 <div class="contact-info__item">
                     <i class="fas fa-map-marked-alt contact-info__loc"></i>
@@ -85,6 +85,45 @@ export default {
     <!-- footer -->
     <Footer></Footer>
     `,
+
+    mounted() {
+        gsap.registerPlugin(ScrollTrigger);
+        let tl = gsap.timeline({ defaults: { ease: "power4.inOut", duration: 2 } });
+        //let f = CSSRulePlugin.getRule(".class::pseudo");
+    
+        ScrollTrigger.defaults({ease: "none", duration: 2, markers: true });
+    
+        tl.to('.contact-hero', {x: 0, opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'})
+
+        gsap.to('.form', {y: 0, opacity:1, duration: 1,
+            scrollTrigger: {
+            trigger: '.form',
+            start: "top center",
+            }
+        }, )
+
+
+        gsap.to('.contact__title', {y: 0, opacity:1, 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', duration: 1,
+            scrollTrigger: {
+            trigger: '.contact__title',
+            start: "center center",
+            }
+        }, )
+    
+        gsap.to('.contact-info__item i', {y: 0, opacity:1, duration: 1, stagger: .3,
+            scrollTrigger: {
+            trigger: '.contact__title',
+            start: "center center",
+            }
+        }, )
+    
+        gsap.to('.contact-info__text', {y: 0, opacity:1, 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', duration: 1, stagger: .3,
+            scrollTrigger: {
+            trigger: '.contact__title',
+            start: "center center",
+            }
+        }, )
+    },
 
     methods: {
         validateEmail: function(email) {

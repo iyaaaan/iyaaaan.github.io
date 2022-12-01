@@ -103,64 +103,63 @@ export default {
           .to('.hero__caption code', {y:0, opacity:1, 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)'}, "-=1.90")
           .to('.hero__cta', {y:0, opacity:1,}, "-=2.2")
 
-          gsap.to('.about__img', {transform: 'translateX(0)', opacity:1, duration: 1,
+        gsap.to('.about__img', {x: 0, opacity:1, duration: 1,
           scrollTrigger: {
             trigger: '.about__img',
             start: "70% 80%",
           }
         }, )
     
-        gsap.to('.about__caption-title, .about__caption-text', {transform: 'translateX(0)', opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1,
+        gsap.to('.about__caption-title, .about__caption-text', {x: 0, opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1,
           scrollTrigger: {
             trigger: '.about__img',
             start: "70% 80%",
           }
         }, )
     
-        gsap.to('.about__caption .read-more', {y: 0, opacity:1,  duration: 1, ease: "none",
+        gsap.to('.about__caption .read-more', {x: 0, opacity:1,  duration: 1, ease: "none",
           scrollTrigger: {
             trigger: '.about__img',
             start: "70% 80%",
           }
         }, )
     
-        gsap.to('.project__img', {transform: 'translateX(0)', opacity:1, duration: 1,
+        gsap.to('.project__img', {x: 0, opacity:1, duration: 1,
           scrollTrigger: {
             trigger: '.project__img',
             start: "70% 80%",
           }
         }, )
     
-        gsap.to('.project__caption-title, .project__caption-text', {transform: 'translateX(0)', opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1,
+        gsap.to('.project__caption-title, .project__caption-text', {x: 0, opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1,
           scrollTrigger: {
             trigger: '.project__img',
             start: "70% 80%",
           }
         }, )
     
-        gsap.to('.project__caption .read-more', {y: 0, opacity:1,  duration: 1, ease: "none",
+        gsap.to('.project__caption .read-more', {x: 0, opacity:1,  duration: 1, ease: "none",
           scrollTrigger: {
             trigger: '.project__img',
             start: "70% 80%",
           }
         }, )
     
-        gsap.to('.contact__title', {transform: 'translateY(0)', opacity:1, 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', duration: 1,
+        gsap.to('.contact__title', {y: 0, opacity:1, 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', duration: 1,
             scrollTrigger: {
             trigger: '.contact__title',
             start: "center center",
             }
         }, )
     
-        gsap.to('.contact-info__item i', {transform: 'translateY(0)', opacity:1, duration: 1, stagger: .3,
+        gsap.to('.contact-info__item i', {y: 0, opacity:1, duration: 1, stagger: .3,
             scrollTrigger: {
             trigger: '.contact__title',
             start: "center center",
-            stagger: 1
             }
         }, )
     
-        gsap.to('.contact-info__text', {transform: 'translateY(0)', opacity:1, 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', duration: 1, stagger: .3,
+        gsap.to('.contact-info__text', {y: 0, opacity:1, 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', duration: 1, stagger: .3,
             scrollTrigger: {
             trigger: '.contact__title',
             start: "center center",
