@@ -40,3 +40,27 @@
         margin-left: 5px;
     }
 }   
+
+.scroll-to-top {
+    color: var(--color-almost-famous);
+    font-size: 30px;
+    line-height: 1;
+    text-align: center;
+    position: fixed;
+    bottom: 55px;
+    right: 50px;
+    transition: .3s;
+
+    opacity: 0;
+
+    & span {
+        display: block;
+        text-align: center;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    &:hover {
+        color: var(--color-highlight);
+    }
+}

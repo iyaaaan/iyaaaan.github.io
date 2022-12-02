@@ -87,6 +87,9 @@ export default {
     `,
 
     mounted() {
+        // remove disable-scroll class  
+         document.body.classList.remove("disable-scroll");
+
         gsap.registerPlugin(ScrollTrigger);
         let tl = gsap.timeline({ defaults: { ease: "power4.inOut", duration: 2 } });
         //let f = CSSRulePlugin.getRule(".class::pseudo");

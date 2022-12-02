@@ -50,55 +50,58 @@ export default {
     `,
 
     mounted() {
-        gsap.registerPlugin(ScrollTrigger);
-        let tl = gsap.timeline({ defaults: { ease: "power4.inOut", duration: 2 } });
-        //let f = CSSRulePlugin.getRule(".class::pseudo");
-    
-        ScrollTrigger.defaults({ease: "none", duration: 2});
-    
-        tl.to('.project-hero h1', {x: 0, opacity:1})
+      // remove disable-scroll class  
+      document.body.classList.remove("disable-scroll");
 
-        gsap.to('.artine > .my-project__img, .artine .my-project__desc', {y: 0, opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1,
-          scrollTrigger: {
-            trigger: '.artine',
-            start: "top center",
-          }
-        }, )
+      gsap.registerPlugin(ScrollTrigger);
+      let tl = gsap.timeline({ defaults: { ease: "power4.inOut", duration: 2 } });
+      //let f = CSSRulePlugin.getRule(".class::pseudo");
+  
+      ScrollTrigger.defaults({ease: "none", duration: 2});
+  
+      tl.to('.project-hero h1', {x: 0, opacity:1})
 
-        gsap.to('.artine .my-project__title', {x: 0, opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1,
-          scrollTrigger: {
-            trigger: '.artine',
-            start: "top center",
-          }
-        }, )
+      gsap.to('.artine > .my-project__img, .artine .my-project__desc', {y: 0, opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1,
+        scrollTrigger: {
+          trigger: '.artine',
+          start: "top center",
+        }
+      }, )
 
-        gsap.to('.artine .read-more', {x: 0, opacity:1,  duration: 1, ease: "none",
-          scrollTrigger: {
-            trigger: '.artine',
-            start: "top center",
-          }
-        }, )
+      gsap.to('.artine .my-project__title', {x: 0, opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1,
+        scrollTrigger: {
+          trigger: '.artine',
+          start: "top center",
+        }
+      }, )
+
+      gsap.to('.artine .read-more', {x: 0, opacity:1,  duration: 1, ease: "none",
+        scrollTrigger: {
+          trigger: '.artine',
+          start: "top center",
+        }
+      }, )
 
 
-        gsap.to('.ctb .my-project__img, .ctb .my-project__desc', {y: 0, opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1,
-          scrollTrigger: {
-            trigger: '.ctb',
-            start: "top center",
-          }
-        }, )
+      gsap.to('.ctb .my-project__img, .ctb .my-project__desc', {y: 0, opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1,
+        scrollTrigger: {
+          trigger: '.ctb',
+          start: "top center",
+        }
+      }, )
 
-        gsap.to('.ctb .my-project__title', {x: 0, opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1,
-          scrollTrigger: {
-            trigger: '.ctb',
-            start: "top center",
-          }
-        }, )
+      gsap.to('.ctb .my-project__title', {x: 0, opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1,
+        scrollTrigger: {
+          trigger: '.ctb',
+          start: "top center",
+        }
+      }, )
 
-        gsap.to('.ctb .read-more', {x: 0, opacity:1,  duration: 1, ease: "none",
-          scrollTrigger: {
-            trigger: '.ctb',
-            start: "top center",
-          }
-        }, )
+      gsap.to('.ctb .read-more', {x: 0, opacity:1,  duration: 1, ease: "none",
+        scrollTrigger: {
+          trigger: '.ctb',
+          start: "top center",
+        }
+      }, )
     }
 }

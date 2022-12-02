@@ -81,6 +81,9 @@ export default {
     `,
 
     mounted() {
+        // remove disable-scroll class  
+         document.body.classList.remove("disable-scroll");
+
         gsap.registerPlugin(ScrollTrigger);
         let tl = gsap.timeline({ defaults: { ease: "power4.inOut", duration: 2 } });
         //let f = CSSRulePlugin.getRule(".class::pseudo");
@@ -89,10 +92,10 @@ export default {
     
         tl.to('.about-hero h1', {x: 0, opacity:1})
 
-        gsap.to('.about-caption__img', {y: 100, opacity:1, duration: 1.5,
+        gsap.to('.about-caption__img', {y: -100, opacity:1, duration: 1.5,
           scrollTrigger: {
-            trigger: '.about-caption__text',
-            start: "center 70%",
+            trigger: '.about-caption__img',
+            start: "top 70%",
           }
         }, )
 
@@ -113,14 +116,14 @@ export default {
         gsap.to('.about-exp__title', {x: 0, opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: .9,
             scrollTrigger: {
             trigger: '.about-exp__title',
-            start: "top 30%",
+            start: "top center",
             }
         }, )
 
         gsap.to('.about-exp__info, .about-exp__desc', {y: 0, opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1,
             scrollTrigger: {
                 trigger: '.about-exp__title',
-                start: "top 30%",
+                start: "top center",
             }
         }, )
 
@@ -133,7 +136,7 @@ export default {
 
         gsap.to('.about-skill__item', {y: 0, opacity:1, duration: .3, stagger: .1, ease: "none",
           scrollTrigger: {
-            trigger: '.about-skill__item',
+            trigger: '.about-skill__title',
             start: "top 90%",
           }
         }, )
