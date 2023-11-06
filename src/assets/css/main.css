@@ -27,13 +27,13 @@
   --font-primary: "Poppins", sans-serif;
   --font-title: "Merriweather", serif;
   --font-logo: "SergioTrendy";
-  --color-dreamsicle: #F5D4C3;
-  --color-fresh-watermelon: #E09789;
-  --color-frosted-glass: #E9F1EF;
-  --color-julep-green: #C8DBD7;
-  --color-devonshire: #F6EFE7;
-  --color-almost-famous: #3C5556;
-  --color-highlight: #88B3AA;
+  --color-dreamsicle: #f5d4c3;
+  --color-fresh-watermelon: #e09789;
+  --color-frosted-glass: #e9f1ef;
+  --color-julep-green: #c8dbd7;
+  --color-devonshire: #f6efe7;
+  --color-almost-famous: #3c5556;
+  --color-highlight: #88b3aa;
   --color-whisper: #e6e6e6;
   --white: #fff;
   --black: #242424;
@@ -52,7 +52,8 @@
   font-style: normal;
   font-display: swap;
   unicode-range: U+000-5FF;
-  src: local("Poppins"), local("Poppins-Regular"), url(./../fonts/Poppins-Regular.ttf) format("ttf");
+  src: local("Poppins"), local("Poppins-Regular"),
+    url(./../fonts/Poppins-Regular.ttf) format("ttf");
 }
 @font-face {
   font-family: SergioTrendy;
@@ -181,7 +182,8 @@ body.disable-scroll {
   color: var(--color-fresh-watermelon);
   display: flex;
 }
-.navbar__logo-up, .navbar__logo-down {
+.navbar__logo-up,
+.navbar__logo-down {
   position: relative;
   padding: 0;
   overflow: hidden;
@@ -189,7 +191,8 @@ body.disable-scroll {
   display: inline-block;
   text-shadow: -2px 2px var(--color-dreamsicle);
 }
-.navbar__logo-up > span, .navbar__logo-down > span {
+.navbar__logo-up > span,
+.navbar__logo-down > span {
   display: inline-block;
   transform: translateY(0%);
   transition: inherit;
@@ -248,7 +251,8 @@ body.disable-scroll {
   transition: 0.3s;
   display: block;
 }
-.navbar-toggler__bar::before, .navbar-toggler__bar::after {
+.navbar-toggler__bar::before,
+.navbar-toggler__bar::after {
   content: "";
   position: absolute;
   height: 4px;
@@ -338,7 +342,8 @@ body.disable-scroll {
   background-color: var(--color-dreamsicle);
   transition: 0.3s ease;
 }
-.navbar-menu__link:hover::after, .navbar-menu__link.router-link-active::after {
+.navbar-menu__link:hover::after,
+.navbar-menu__link.router-link-active::after {
   left: 0;
   width: 100%;
 }
@@ -395,11 +400,11 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
-input[type=date] {
+input[type="date"] {
   text-transform: none;
 }
 
@@ -773,13 +778,17 @@ textarea {
   transform: translateY(100px);
   opacity: 0;
 }
-.contact-info__loc, .contact-info__phone, .contact-info__email {
+.contact-info__loc,
+.contact-info__phone,
+.contact-info__email {
   position: relative;
   font-size: 50px;
   margin-bottom: 30px;
   color: var(--color-highlight);
 }
-.contact-info__loc::after, .contact-info__phone::after, .contact-info__email::after {
+.contact-info__loc::after,
+.contact-info__phone::after,
+.contact-info__email::after {
   content: "";
   position: absolute;
   height: 100px;
@@ -1056,7 +1065,7 @@ textarea {
   margin: 0 auto;
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   opacity: 0;
-  transform: translateY(-100px);
+  transform: translateY(-100%);
 }
 @media screen and (min-width: 992px) {
   .about-exp__desc {
@@ -1322,7 +1331,11 @@ textarea {
 .form__field:focus {
   padding-bottom: 6px;
   border-width: 3px;
-  border-image: linear-gradient(to right, var(--color-primary), var(--color-highlight));
+  border-image: linear-gradient(
+    to right,
+    var(--color-primary),
+    var(--color-highlight)
+  );
   border-image-slice: 1;
 }
 .form__field:focus ~ .form__label {
@@ -1336,7 +1349,8 @@ textarea {
 }
 
 /* reset input */
-.form__field:required, .form__field:invalid {
+.form__field:required,
+.form__field:invalid {
   box-shadow: none;
 }
 

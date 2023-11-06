@@ -1,12 +1,12 @@
 export default {
-    data: () => ({
-        toggle: false,
-    }),
-    template: 
+  data: () => ({
+    toggle: false,
+  }),
+  template:
     /* html */
     `
     <!-- navbar -->
-    <div class="container-right">
+    <div class="container">
         <nav class="navbar">
             <router-link to="/" class="">
                 <div class="navbar__logo">
@@ -46,16 +46,15 @@ export default {
     </div> <!-- ./navbar -->
     `,
 
-    methods: {
-        toggleMenu() {
-            this.toggle = !this.toggle;
-            
-            if(this.toggle) {
-                document.body.classList.add("disable-scroll");
-            } else {
-                document.body.classList.remove("disable-scroll");
-            }
-        }
-    }
-}
+  methods: {
+    toggleMenu() {
+      this.toggle = !this.toggle;
 
+      if (this.toggle) {
+        document.body.classList.add("disable-scroll");
+      } else {
+        document.body.classList.remove("disable-scroll");
+      }
+    },
+  },
+};

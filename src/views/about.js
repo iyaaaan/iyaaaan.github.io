@@ -1,10 +1,10 @@
-import Navbar from '../components/navbar.js';
-import Footer from '../components/footer.js';
+import Navbar from "../components/navbar.js";
+import Footer from "../components/footer.js";
 
 export default {
-    data: () => ({}),
-    components: {Navbar, Footer},
-    template: 
+  data: () => ({}),
+  components: { Navbar, Footer },
+  template:
     /* html */
     `
     <!-- navbar -->
@@ -58,6 +58,17 @@ export default {
                 <li>Inventoried and geo-tagged facilities/buildings in all CNSC campuses.</li>
                 <li>Surveyed and took an aerial shot of each campuses using a drone for Land Use Development and Infrastructure Plans.</li>
             </ul>
+
+            <div class="about-exp__info">
+                <h3 class="about-exp__position">PhilHealth Processor</h3>
+                <p class="about-exp__company">Our Lady of Lourdes Hospital</p>
+                <span class="about-exp__date"><i>March 2020 - May 2021</i></span>
+            </div>
+            <ul class="about-exp__desc">
+                <li>Validates and sends required documents of patients to PhilHealth for payment of various benefits.</li>
+                <li>Sends e-mail to the Regional PhilHealth Office that concerns with the payment of the hospital.</li>
+                <li>Assisted in troubleshooting network and problems.</li>
+            </ul>
         </div>
     </div>
 
@@ -80,65 +91,93 @@ export default {
     <Footer></Footer>
     `,
 
-    mounted() {
-        // remove disable-scroll class  
-         document.body.classList.remove("disable-scroll");
+  mounted() {
+    // remove disable-scroll class
+    document.body.classList.remove("disable-scroll");
 
-        gsap.registerPlugin(ScrollTrigger);
-        let tl = gsap.timeline({ defaults: { ease: "power4.inOut", duration: 2 } });
-        //let f = CSSRulePlugin.getRule(".class::pseudo");
-    
-        ScrollTrigger.defaults({ease: "none", duration: 2});
-    
-        tl.to('.about-hero h1', {x: 0, opacity:1})
+    gsap.registerPlugin(ScrollTrigger);
+    let tl = gsap.timeline({ defaults: { ease: "power4.inOut", duration: 2 } });
+    //let f = CSSRulePlugin.getRule(".class::pseudo");
 
-        gsap.to('.about-caption__img', {y: -100, opacity:1, duration: 1.5,
-          scrollTrigger: {
-            trigger: '.about-caption__img',
-            start: "top 70%",
-          }
-        }, )
+    ScrollTrigger.defaults({ ease: "none", duration: 2 });
 
-        gsap.to('.about-caption__text', {y: 0, opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: .7,
-          scrollTrigger: {
-            trigger: '.about-caption__text',
-            start: "center 70%",
-          }
-        }, )
+    tl.to(".about-hero h1", { x: 0, opacity: 1 });
 
-        gsap.to('.about-education', {x: 0, opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1,
-          scrollTrigger: {
-            trigger: '.about-education',
-            start: "top center",
-          }
-        }, )
+    gsap.to(".about-caption__img", {
+      y: -100,
+      opacity: 1,
+      duration: 1.5,
+      scrollTrigger: {
+        trigger: ".about-caption__img",
+        start: "top 70%",
+      },
+    });
 
-        gsap.to('.about-exp__title', {x: 0, opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: .9,
-            scrollTrigger: {
-            trigger: '.about-exp__title',
-            start: "top center",
-            }
-        }, )
+    gsap.to(".about-caption__text", {
+      y: 0,
+      opacity: 1,
+      "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      duration: 0.7,
+      scrollTrigger: {
+        trigger: ".about-caption__text",
+        start: "center 70%",
+      },
+    });
 
-        gsap.to('.about-exp__info, .about-exp__desc', {y: 0, opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1,
-            scrollTrigger: {
-                trigger: '.about-exp__title',
-                start: "top center",
-            }
-        }, )
+    gsap.to(".about-education", {
+      x: 0,
+      opacity: 1,
+      "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".about-education",
+        start: "top center",
+      },
+    });
 
-        gsap.to('.about-skill__title', {x: 0, opacity:1, 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: .9,
-            scrollTrigger: {
-                trigger: '.about-skill__title',
-                start: "top 90%",
-            }
-        }, )
+    gsap.to(".about-exp__title", {
+      x: 0,
+      opacity: 1,
+      "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      duration: 0.9,
+      scrollTrigger: {
+        trigger: ".about-exp__title",
+        start: "top center",
+      },
+    });
 
-        gsap.to('.about-skill__item', {y: 0, opacity:1, duration: .3, stagger: .1, ease: "none",
-          scrollTrigger: {
-            trigger: '.about-skill__title',
-            start: "top 90%",
-          }
-        }, )
-    }
-}
+    gsap.to(".about-exp__info, .about-exp__desc", {
+      y: 0,
+      opacity: 1,
+      "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      duration: 1,
+      scrollTrigger: {
+        trigger: ".about-exp__title",
+        start: "top center",
+      },
+    });
+
+    gsap.to(".about-skill__title", {
+      x: 0,
+      opacity: 1,
+      "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      duration: 0.9,
+      scrollTrigger: {
+        trigger: ".about-skill__title",
+        start: "top 90%",
+      },
+    });
+
+    gsap.to(".about-skill__item", {
+      y: 0,
+      opacity: 1,
+      duration: 0.3,
+      stagger: 0.1,
+      ease: "none",
+      scrollTrigger: {
+        trigger: ".about-skill__title",
+        start: "top 90%",
+      },
+    });
+  },
+};
